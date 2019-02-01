@@ -1,0 +1,23 @@
+<header>
+  <div class="">
+    <%= image_tag "logo" %>
+    <h1>GO TO EVENT</h1>
+  </div>
+    <span>
+    </span>
+    <nav>
+      <%= link_to "GitHub", "https://github.com/edikbekir", class: "square_btn" %>
+      <a>V1.0</a>
+      <% if user_signed_in? %>
+          <%= link_to t(".signed_out"), destroy_user_session_path, class: "square_btn", method: :delete %>
+        <% else %>
+          <%= link_to t(".sign_in"), user_session_path, class: "square_btn" %>
+      <% end %>
+        <%= link_to root_path(locale: :en), class: "flag" do %>
+          <%= image_tag "united-kingdom" %>
+        <% end %>
+        <%= link_to root_path(locale: :ua), class: "flag" do %>
+          <%= image_tag "ukraine" %>
+        <% end %>
+    </nav>
+</header>

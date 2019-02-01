@@ -1,0 +1,25 @@
+<%= render template: "console/index" %>
+  <div class="events">
+    <table class="darkTable">
+      <thead>
+        <tr>
+          <th><%= t(".name") %></th>
+          <th><%= t(".start_time") %></th>
+          <th><%= t(".end_time") %></th>
+          <th><%= t(".start_event") %></th>
+          <th><%= t(".assign_BSSID") %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @events.each do |event|%>
+          <tr class="event">
+            <td><%= event.name %></td>
+            <td><%= event.format_start_time %></td>
+            <td><%= event.format_end_time %></td>
+            <td><%= link_to_if event.actual?, t(".begin"), event_path(event), method: :patch, class: "start-event btn btn-success"%> </td>
+            <td><%= link_to "BSSID", write_bssid_path, method: :post, class: "start-event btn btn-success"%> </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>

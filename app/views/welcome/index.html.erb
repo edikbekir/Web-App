@@ -1,0 +1,10 @@
+<div class="container">
+  <% if current_user.present? %>
+  <div class="welcome-message">
+    <h2><%= t(".welcome") %> <%= current_user.first_name %> <%= current_user.last_name %></h2>
+  </div>
+  <div class="go-to">
+    <%= link_to t(".console"), console_index_path(locale: I18n.locale) %>
+  </div>
+  <% end %>
+</div>

@@ -1,0 +1,29 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.countdown.css">
+<script type="text/javascript" src="js/jquery.plugin.js"></script>
+<script type="text/javascript" src="js/jquery.countdown.js"></script>
+<%= render template: "console/index" %>
+<%= content_tag :div, class: "countdown", id: "countdown", data: {time: @event.format_end_time} do %>
+  <div class="days"></div>
+  <div class="hours"></div>
+  <div class="minutes"></div>
+  <div class="seconds"></div>
+<% end %>
+<div class="visitors">
+  <table class="darkTable">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @event.get_visitors_list.each do |visitor|%>
+        <tr>
+          <td><%= visitor.first_name %></td>
+          <td><%= visitor.last_name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
