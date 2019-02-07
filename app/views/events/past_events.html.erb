@@ -1,4 +1,5 @@
-<%= render template: "console/index" %>
+<div class="main-events">
+  <%= render template: "console/index" %>
   <div class="events">
     <table class="darkTable">
       <thead>
@@ -11,13 +12,14 @@
       </thead>
       <tbody>
         <% @events.each do |event|%>
-          <tr class="event">
-            <td><%= link_to event.name, event_path(event) %></td>
-            <td><%= link_to event.format_start_time, event_path(event) %></td>
-            <td><%= link_to event.format_end_time, event_path(event)%></td>
-            <td><%= event.user_mac %> </td>
-          </tr>
+        <tr class="event">
+          <td><%= link_to event.name, event_path(event) %></td>
+          <td><%= link_to event.format_start_time, event_path(event) %></td>
+          <td><%= link_to event.format_end_time, event_path(event)%></td>
+          <td><%= event.user_mac %> </td>
+        </tr>
         <% end %>
       </tbody>
     </table>
   </div>
+</div>

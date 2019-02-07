@@ -17,10 +17,19 @@
 @import "font-awesome";
 
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700italic);
+
 * { padding: 0; margin: 0; }
-body { background: #1abc9c; font-family: 'Lato', sans-serif; text-transform: uppercase; letter-spacing: 1px;}
+
+body {
+  padding: 10px;
+  background: #d1d1d1;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
 header {
+  border-radius: 50px;
   text-align: justify;
   height: 8em;
   padding: 2em 5%;
@@ -209,14 +218,13 @@ a.btn-success:hover {
 }
 
 .sidenav {
-  height: 100%;
   margin-top: 5px;
   margin-left: 5px;
-  margin-right: 5%;
   width: 20%;
   background-color: #20211d;
-  float: left;
+  border-radius: 20px;
   transition: 0.5s;
+  position: absolute;
 }
 
 .sidenav a {
@@ -226,25 +234,37 @@ a.btn-success:hover {
   color: #818181;
   display: block;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .sidenav a:hover {
+  text-decoration: none;
+  border-radius: 50px;
   color: #f1f1f1;
   background-color: #111;
 }
 
-.darkTable{
-  margin-left: 20px;
+.main-events {
+  position: relative;
+}
+
+.events {
+  right: 0;
+  width: 80%;
+  position: absolute;
 }
 
 table.darkTable {
+  height: auto;
+  position: relative;
   margin: 5px 0 0 5px;
   background-color: #4A4A4A;
-  width: 60%;
   height: 140px;
   text-align: center;
   border: 2px solid #000000;
   border-collapse: collapse;
+  margin-left: 7%;
+  width: 80%;
 }
 table.darkTable td, table.darkTable th {
   border: 1px solid #4A4A4A;
@@ -268,6 +288,7 @@ table.darkTable thead th {
   text-align: center;
   border-left: 2px solid #4A4A4A;
 }
+
 table.darkTable thead th:first-child {
   border-left: none;
 }
@@ -317,4 +338,47 @@ table.darkTable thead th:first-child {
 
 .event td a:hover{
   color: #000;
+}
+
+.main-image img{
+  width: 100%;
+  height: auto;
+  position: relative;
+  border-radius: 50px;
+  margin-top: 1%;
+}
+
+.title h1{
+  position: absolute;
+  z-index:1;
+  display: flex;
+  bottom: 50%;
+  left: 30%;
+  font-size: 5em;
+  font-style: italic;
+  color: #000;
+  font-weight: bold;
+}
+
+.title p{
+  position: absolute;
+  z-index:1;
+  display: flex;
+  bottom: 40%;
+  left: 17%;
+  font-size: 2em;
+  font-style: italic;
+  color: #000;
+  font-weight: bold;
+}
+
+.go-to a{
+  text-decoration: none;
+  color: #000;
+}
+
+h3.empty-events{
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
 }

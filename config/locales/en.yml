@@ -6,6 +6,7 @@ en:
       start_event: Start
       end_time: End time
       assign_BSSID: Assign BSSID
+      empty-events: There are currently no events available.
     past_events:
       name: Name
       start_time: Start time

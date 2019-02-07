@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   respond_to :html, :js
   def index
     @events = User.joins(:events).find(current_user.id).events.where("end_time > ?", Time.current).map { |event| EventPresenter.new event }
-    @countdown = @events.find(params[:id]).first.format_end_time
+    @countdown = @events.find(params[:id]).first.format_end_time if @events.present?
   end
 
   def show

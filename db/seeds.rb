@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user = User.create!(admin: true, first_name: "Edaurd", last_name: "Bekir", email: "admin@example.com", password: "111111")
-visitor = Visitor.create!(first_name: "Julia", last_name: "Lokteva", email: "julia@ggg.com", password: "111111")
+visitor = Visitor.create!(first_name: "Eduard", last_name: "Bekir", email: "edikbekir@gmail.com", password: "123456")
 
 events = [
   Event.create!(start_time: Time.current, name: "ARKPZ"),

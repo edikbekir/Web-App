@@ -1,6 +1,6 @@
 <header>
   <div class="">
-    <%= image_tag "logo" %>
+    <%= image_tag "logo.png" %>
     <h1>GO TO EVENT</h1>
   </div>
     <span>
@@ -14,10 +14,10 @@
           <%= link_to t(".sign_in"), user_session_path, class: "square_btn" %>
       <% end %>
         <%= link_to root_path(locale: :en), class: "flag" do %>
-          <%= image_tag "united-kingdom" %>
+          <%= image_tag "united-kingdom.png" %>
         <% end %>
         <%= link_to root_path(locale: :ua), class: "flag" do %>
-          <%= image_tag "ukraine" %>
+          <%= image_tag "ukraine.png" %>
         <% end %>
     </nav>
 </header>

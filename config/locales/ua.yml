@@ -6,6 +6,7 @@ ua:
       start_event: Почати
       end_time: Кінець
       assign_BSSID: Привласнити BSSID
+      empty-events: Наразі немає доступних подій.
     past_events:
       name: Назва
       start_time: Початок
